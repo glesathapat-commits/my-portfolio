@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - นาย สถาปัตย์ สิงห์โตทอง</title>
-    
-    <!-- Google Fonts: Kanit (ฟอนต์ภาษาไทยที่ดูทันสมัย) -->
+    <title>Portfolio - <span class="nav-name-title"></span></title>
+
+    <!-- Google Fonts: Kanit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome สำหรับใช้งานไอคอนต่างๆ -->
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* ==========================================
-           1. RESET & VARIABLE SETTINGS (กำหนดค่าเริ่มต้นและสีธีม)
+           1. RESET & VARIABLE SETTINGS
            ========================================== */
         :root {
-            --bg-primary: #0f172a;       /* สีพื้นหลังหลัก (Dark Navy) */
+            --bg-primary: #0f172a;       /* สีพื้นหลังหลัก */
             --bg-secondary: #1e293b;     /* สีพื้นหลังการ์ด/ส่วนย่อย */
-            --accent-blue: #38bdf8;      /* สีฟ้าไซเบอร์ สำหรับไฮไลท์ */
-            --accent-purple: #818cf8;    /* สีม่วงนีออน เพิ่มมิติ */
+            --accent-blue: #38bdf8;      /* สีฟ้าไซเบอร์ */
+            --accent-purple: #818cf8;    /* สีม่วงนีออน */
             --text-main: #f8fafc;        /* สีข้อความหลัก */
             --text-muted: #94a3b8;       /* สีข้อความรอง */
             --border-color: #334155;     /* สีเส้นขอบ */
-            --nav-bg: rgba(15, 23, 42, 0.85); /* พื้นหลัง Navbar แบบโปร่งแสง */
+            --nav-bg: rgba(15, 23, 42, 0.85);
         }
 
         * {
@@ -43,7 +43,6 @@
             overflow-x: hidden;
         }
 
-        /* Container สำหรับจัดระเบียบความกว้างของเนื้อหา */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -51,7 +50,7 @@
         }
 
         /* ==========================================
-           2. HEADER & NAVIGATION (แถบเมนูด้านบน)
+           2. HEADER & NAVIGATION
            ========================================== */
         header {
             position: fixed;
@@ -97,7 +96,7 @@
         }
 
         /* ==========================================
-           3. HERO SECTION (ส่วนต้อนรับหน้าแรก)
+           3. HERO SECTION
            ========================================== */
         #hero {
             min-height: 100vh;
@@ -156,7 +155,6 @@
             max-width: 500px;
         }
 
-        /* ปุ่มกด Action Buttons */
         .btn-group {
             display: flex;
             gap: 15px;
@@ -193,7 +191,6 @@
             border-color: var(--accent-blue);
         }
 
-        /* ส่วนแสดงรูปโปรไฟล์แบบอนิเมชันขอบพลิ้ว */
         .hero-image {
             flex: 1;
             display: flex;
@@ -225,7 +222,7 @@
         }
 
         /* ==========================================
-           4. GENERAL SECTION STYLES (สไตล์ร่วมสำหรับทุก Section)
+           4. GENERAL SECTION STYLES
            ========================================== */
         section {
             padding: 90px 0;
@@ -249,7 +246,7 @@
         }
 
         /* ==========================================
-           5. ABOUT SECTION (ส่วนเกี่ยวกับฉัน)
+           5. ABOUT SECTION
            ========================================== */
         .about-grid {
             display: grid;
@@ -293,7 +290,7 @@
         }
 
         /* ==========================================
-           6. PROJECTS SECTION (ส่วนผลงาน)
+           6. PROJECTS SECTION
            ========================================== */
         .projects-grid {
             display: grid;
@@ -307,6 +304,8 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -323,6 +322,9 @@
 
         .project-info {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .project-info h3 {
@@ -334,12 +336,14 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 15px;
+            flex-grow: 1;
         }
 
         .project-tags {
             display: flex;
             gap: 8px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
 
         .project-tags span {
@@ -361,7 +365,7 @@
         }
 
         /* ==========================================
-           7. CONTACT SECTION (ส่วน Contact Tasid)
+           7. CONTACT SECTION
            ========================================== */
         .contact-container {
             max-width: 600px;
@@ -405,7 +409,7 @@
         }
 
         /* ==========================================
-           8. FOOTER (ส่วนท้ายเว็บ)
+           8. FOOTER
            ========================================== */
         footer {
             text-align: center;
@@ -415,7 +419,6 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive Design สำหรับปรับแต่งการแสดงผลบนหน้าจอมือถือ */
         @media (max-width: 768px) {
             .hero-content {
                 flex-direction: column-reverse;
@@ -435,17 +438,17 @@
             }
 
             .nav-links {
-                display: none; /* ซ่อนเมนูไว้กรณีหน้าจอเล็ก (สามารถเพิ่ม JavaScript เพื่อทำ Hamburger Menu ได้) */
+                display: none;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- แถบเมนูด้านบน (Header Navigation) -->
+    <!-- Header Navigation -->
     <header>
         <div class="container nav-container">
-            <div class="logo">SATHAPAT.DEV</div>
+            <div class="logo" id="logo-text">SATHAPAT.DEV</div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#hero">หน้าแรก</a></li>
@@ -457,17 +460,16 @@
         </div>
     </header>
 
-    <!-- เนื้อหาหลักของเว็บไซต์ (Main Content) -->
     <main>
 
-        <!-- SECTION 1: HERO (ส่วนต้อนรับหลัก) -->
+        <!-- SECTION 1: HERO -->
         <section id="hero">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <span class="badge">💻 Developer professional </span>
-                    <h1>สวัสดีครับ, ผม <br><span>นาย สถาปัตย์ สิงห์โตทอง </span></h1>
-                    <h2>นักเรียนมัธยมปลายผู้มีความเชี่ยวชาญด้านในเทคโนโลยีและการเขียนโค้ด</h2>
-                    <p>ยินดีต้อนรับสู่ Portfolio ของผม พื้นที่สะสมผลงาน ความรู้ และโปรเจกต์ด้านคอมพิวเตอร์ที่ผมตั้งใจพัฒนาขึ้นครับ</p>
+                    <span class="badge" id="profile-job">💻 Developer</span>
+                    <h1>สวัสดีครับ, ผม <br><span id="profile-name">กำลังโหลดข้อมูล...</span></h1>
+                    <h2 id="profile-subtitle">...</h2>
+                    <p>ยินดีต้อนรับสู่ Portfolio ของผม พื้นที่สะสมผลงาน ความรู้ และโปรเจกต์ที่ผมตั้งใจพัฒนาขึ้นครับ</p>
                     <div class="btn-group">
                         <a href="#projects" class="btn btn-primary">ชมผลงาน</a>
                         <a href="#contact" class="btn btn-secondary">ติดต่อฉัน</a>
@@ -475,101 +477,51 @@
                 </div>
                 <div class="hero-image">
                     <div class="profile-img-wrapper">
-                        <!-- 📌 สามารถเปลี่ยน URL ใน src เป็นรูปโปรไฟล์ของคุณได้ที่นี่ -->
-                        <img src="https://cdn.onefc.com/wp-content/uploads/sites/5/2025/08/11-Panpayak-vs-Asadula-Imangazaliev-OL122-20-scaled.jpg" alt="รูปโปรไฟล์ นาย สถาปัตย์ สิงห์โตทอง">
+                        <img id="profile-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="รูปโปรไฟล์">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: ABOUT (ส่วนเกี่ยวกับฉัน) -->
+        <!-- SECTION 2: ABOUT -->
         <section id="about">
             <div class="container">
                 <h2 class="section-title">เกี่ยวกับฉัน</h2>
                 <div class="about-grid">
                     <div>
-                        <!-- รูปภาพเกี่ยวกับเทคโนโลยีและคอมพิวเตอร์ประกอบ -->
                         <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" alt="Tech Workspace" class="about-tech-img">
                     </div>
                     <div class="about-text">
                         <h3>มุ่งมั่นพัฒนาทักษะด้าน Web Development & Tech</h3>
-                        <p>ปัจจุบันกำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาตอนปลาย มีความสนใจเป็นพิเศษเกี่ยวกับการเขียนโปรแกรม สร้างเว็บไซต์ และวิทยาการคอมพิวเตอร์ ชอบเรียนรู้เทคโนโลยีใหม่ๆ และพัฒนาทักษะผ่านการทำโปรเจกต์จริง</p>
-                        
+                        <p id="about-description">กำลังดึงข้อมูลการศึกษา...</p>
+
                         <p><strong>ทักษะและความสนใจ:</strong></p>
-                        <div class="skills-list">
-                            <span class="skill-tag">HTML5 & CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Computer Hardware</span>
-                            <span class="skill-tag">Git & GitHub</span>
+                        <div class="skills-list" id="skills-container">
+                            <!-- Skills dynamic loading -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: PROJECTS (ส่วนผลงาน) -->
+        <!-- SECTION 3: PROJECTS -->
         <section id="projects">
             <div class="container">
                 <h2 class="section-title">ผลงานของฉัน</h2>
-                <div class="projects-grid">
-                    
-                    <!-- การ์ดผลงานที่ 1 -->
-                    <article class="project-card">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=500" alt="Project 1" class="project-img">
-                        <div class="project-info">
-                            <h3>Personal Portfolio</h3>
-                            <p>เว็บไซต์แสดงผลงานส่วนตัวแบบ Single Page ออกแบบด้วย HTML5 และ CSS3 รองรับการทำงานทุกขนาดหน้าจอ</p>
-                            <div class="project-tags">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Responsive</span>
-                            </div>
-                            <a href="#" class="project-link">รายละเอียดโปรเจกต์ <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- การ์ดผลงานที่ 2 -->
-                    <article class="project-card">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=500" alt="Project 2" class="project-img">
-                        <div class="project-info">
-                            <h3>Python Calculator App</h3>
-                            <p>โปรแกรมคำนวณ พัฒนาด้วยภาษา Python สำหรับช่วยคำนวณโจทย์วิชาฟิสิกส์และคณิตศาสตร์ระดับมัธยม</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Algorithm</span>
-                            </div>
-                            <a href="#" class="project-link">รายละเอียดโปรเจกต์ <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- การ์ดผลงานที่ 3 -->
-                    <article class="project-card">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=500" alt="Project 3" class="project-img">
-                        <div class="project-info">
-                            <h3>IoT Smart Home Model</h3>
-                            <p>โมเดลจำลองบ้านอัจฉริยะ ควบคุมการเปิด-ปิดไฟผ่านไมโครคอนโทรลเลอร์ร่วมกับบอร์ดทดลอง</p>
-                            <div class="project-tags">
-                                <span>IoT</span>
-                                <span>Arduino</span>
-                                <span>Hardware</span>
-                            </div>
-                            <a href="#" class="project-link">รายละเอียดโปรเจกต์ <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
+                <div class="projects-grid" id="projects-container">
+                    <!-- Projects dynamic loading -->
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: CONTACT TASID (ส่วนการติดต่อ) -->
+        <!-- SECTION 4: CONTACT -->
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Contact SATHAPAT</h2>
+                <h2 class="section-title">Contact</h2>
                 <div class="contact-container">
-                    <p>สนใจพูดคุย แลกเปลี่ยนความรู้ด้าน IT หรือติดต่องาน สามารถติดต่อผมได้ผ่านช่องทางด้านล่างนี้ครับ</p>
+                    <p>สนใจพูดคุย แลกเปลี่ยนความรู้ หรือติดต่องาน สามารถติดต่อผมได้ผ่านช่องทางด้านล่างนี้ครับ</p>
                     <div class="contact-links">
-                        <a href="mailto:sathapat@example.com" class="contact-btn">
+                        <a href="mailto:example@email.com" class="contact-btn">
                             <i class="fa-regular fa-envelope"></i> Email
                         </a>
                         <a href="https://github.com" target="_blank" class="contact-btn">
@@ -585,12 +537,88 @@
 
     </main>
 
-    <!-- ส่วนท้ายเว็บไซต์ (Footer) -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 นาย สถาปัตย์ สิงห์โตทอง. All Rights Reserved.</p>
+            <p>&copy; 2026 <span id="footer-name"></span>. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript ดึงข้อมูลจาก API -->
+    <script>
+        const API_URL = 'https://script.google.com/macros/s/AKfycbwTa14qLmcNgPDOxE5qvyFnX3A3NslVC6vzR9Tq7PZ4XDHUx8Hjq7cDIV2bhdKMYL_t/exec';
+
+        async function fetchPortfolioData() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) {
+                    throw new Error(`HTTP Error Status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                // 1. อัปเดตข้อมูลส่วน Profile
+                updateProfileUI(data.profile);
+
+                // 2. อัปเดตรายการ Portfolio Projects
+                updatePortfolioUI(data.portfolio);
+
+            } catch (error) {
+                console.error('Error fetching portfolio data:', error);
+                document.getElementById('profile-name').innerText = "ไม่สามารถโหลดข้อมูลได้";
+            }
+        }
+
+        function updateProfileUI(profile) {
+            if (!profile) return;
+
+            // ตั้งชื่อ และ รายละเอียด
+            const fullName = profile.nickname ? `${profile.name} (${profile.nickname})` : profile.name;
+            document.getElementById('profile-name').innerText = fullName;
+            document.getElementById('profile-job').innerText = `💻 ${profile.job}`;
+            document.getElementById('profile-subtitle').innerText = `${profile.job} สาขา ${profile.major} ${profile.university}`;
+            
+            document.getElementById('about-description').innerText = `ปัจจุบันเป็น ${profile.job} สาขา ${profile.major} ที่ ${profile.university} มีความสนใจและมุ่งมั่นในการเรียนรู้เทคโนโลยีใหม่ๆ`;
+            document.getElementById('footer-name').innerText = profile.name;
+
+            // Render Skills
+            if (profile.skills) {
+                const skillsArray = profile.skills.split(',').map(s => s.trim());
+                const skillsContainer = document.getElementById('skills-container');
+                skillsContainer.innerHTML = skillsArray.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+            }
+        }
+
+        function updatePortfolioUI(portfolioList) {
+            const projectsContainer = document.getElementById('projects-container');
+            if (!portfolioList || portfolioList.length === 0) {
+                projectsContainer.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">ไม่พบรายการผลงาน</p>';
+                return;
+            }
+
+            // แสดงผลลัพธ์รายการผลงานแต่ละชิ้น
+            projectsContainer.innerHTML = portfolioList.map(item => {
+                // แปลงรูปแบบวันที่
+                const projectDate = item.date ? new Date(item.date).toLocaleDateString('th-TH', { year: 'numeric', month: 'short' }) : '';
+
+                return `
+                    <article class="project-card">
+                        <img src="${item.image_url || 'https://images.unsplash.com/photo-1555066931-4365d14bab8c'}" alt="${item.title}" class="project-img" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c'">
+                        <div class="project-info">
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                            <div class="project-tags">
+                                <span>Role: ${item.role}</span>
+                                ${projectDate ? `<span>${projectDate}</span>` : ''}
+                            </div>
+                            <a href="#" class="project-link">รายละเอียดโปรเจกต์ <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // เรียกใช้งานเมื่อโหลดหน้าเว็บเรียบร้อยแล้ว
+        document.addEventListener('DOMContentLoaded', fetchPortfolioData);
+    </script>
 </body>
 </html>
